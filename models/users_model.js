@@ -7,11 +7,19 @@ const UserSchema = mongoose.Schema({
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        minlength: 5,
+        unique: true,
+
     },
     password: {
         type: String,
-        required: true
+        required: true,
+        minlength: 5
+    },
+    Date: {
+        type: Date,
+        Default: Date.now()
     }
 })
 
